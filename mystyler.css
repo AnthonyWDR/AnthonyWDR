@@ -28,6 +28,7 @@ header {
   justify-content: center;
 }
 .bannerspacing {
+  /* This width could be giving you issues. Maybe use max-width instead?*/
   width: 1100px;
   margin: 0 auto;
   display: flex;
@@ -201,3 +202,16 @@ nav li:hover {
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
+
+/*--------------------Media Queries-------------------*/
+
+/*@media only screen and (max-width: 1100px) {
+  Enter CSS as normal between curly braces
+  Try this for the navigation, so it starts to wrap your links?
+  #fullnav {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  
+}*/
