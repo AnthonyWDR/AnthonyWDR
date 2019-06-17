@@ -30,10 +30,10 @@ header {
   justify-content: center;
 }
 .bannerspacing {
-  max-width: 1100px;
+  width: 1100px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .title {
   align-self: flex-start;
@@ -66,17 +66,6 @@ header {
     50%{    color: transparent; }
     99%{    color: red;  }
     100%{   color: transparent;    }
-}
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
 }
 .info {
   display: flex;
@@ -114,6 +103,18 @@ header {
 .logo img {
   height: 176px;
 }
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
 a {
   text-decoration: none;
   color: #FFFF;
@@ -335,6 +336,12 @@ nav li:hover {
   .bannerspacing {
     width:95%;
     flex-direction: column;
+}
+#allcontent {
+  background-position-x: -800px;
+}
+#allcontent img {
+  max-width: 40%;
 }
 .title {
   width:64%;
