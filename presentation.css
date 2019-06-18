@@ -381,15 +381,6 @@ nav li:hover {
         width:100%;
     }
 }
-@media (max-width: 600px) {
-
-#allcontent {
-  background-position-x: -800px;
-}
-#allcontent img {
-  max-width: 40%;
-}
-}
 @media (max-width:450px) {
   .title h1 {
     font-size: 1.8rem;
