@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="./reset.css" type="text/css">
     <link rel="stylesheet" href="./presentation.css" type="text/css">
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick/slick-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="./slick/slick/slick.js"></script>
   </head>
   <body>
 
@@ -27,7 +32,7 @@
     </div>
     </header>
 
-    <div id="fullnav">
+    <div id="fullnav" style="position:sticky; z-index:1;">
         <span class="openbtn" style="font-size:30px;cursor:pointer">☰</span>
         <p class="mobile-tariff">TARIFS PROMOTEUR</p>
         <nav class="container main-nav">
@@ -105,45 +110,44 @@ L’Aide à l’Investissement des Ménages est une aide financière pour encour
 
     </div>
     <script>
-window.onscroll = function() {myFunction()};
-
-var fullnav = document.getElementById("fullnav");
-var sticky = fullnav.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    fullnav.classList.add("sticky")
-  } else {
-    fullnav.classList.remove("sticky");
-  }
-}
-</script>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script>
-	    $(document).ready(function(){
-    		$(".openbtn").click(function(){
-      			$(".main-nav").show(500);
-    		});
-        $("li:not(.dropdown)").click(function () {
-        		$(".main-nav").hide(500);
-    		});
-        $(".closebtn").click(function () {
-        		$(".main-nav").hide(500);
-    		});
-        $(window).on('load resize', function(event){
-    var windowSize = $(window).width(); // Could've done $(this).width()
-    if(windowSize < 992){
-        $(".dropdown").click(function() {
-          $(".dropdown-content").toggleClass( "show-dropdown" );
+        $(document).ready(function(){
+          $(".openbtn").click(function(){
+              $(".main-nav").show(500);
+          });
+          $("li:not(.dropdown)").click(function () {
+              $(".main-nav").hide(500);
+          });
+          $(".closebtn").click(function () {
+              $(".main-nav").hide(500);
+          });
+          $(window).on('load resize', function(event){
+      var windowSize = $(window).width(); // Could've done $(this).width()
+      if(windowSize < 992){
+          $(".dropdown").click(function() {
+            $(".dropdown-content").toggleClass( "show-dropdown" );
+          });
+      } else if(windowSize > 994){
+        $(".dropdown").hover(function() {
+            $(".dropdown-content").toggleClass( "show-dropdown" );
+          });
+      }
+    });
         });
-    } else if(windowSize > 994){
-      $(".dropdown").hover(function() {
-          $(".dropdown-content").toggleClass( "show-dropdown" );
-        });
+    </script>
+
+      <script>
+  window.onscroll = function() {myFunction()};
+
+  var fullnav = document.getElementById("fullnav");
+  var sticky = fullnav.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      fullnav.classList.add("sticky")
+    } else {
+      fullnav.classList.remove("sticky");
     }
-});
-  		});
-	</script>
+  }
+  </script>
   </body>
 </html>
